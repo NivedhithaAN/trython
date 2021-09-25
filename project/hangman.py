@@ -4,7 +4,8 @@ name = input()
 print("Hi " +name+ "!")
 print("******HERE ARE SOME RULES******")
 print("----------------------------------------------------------------")
-print("You've got 6 lives and each incorrect answer will cost a body part!!! ")
+print("Use only lowercase letters!")
+print("You've got 6 lives and each incorrect answer will cost a body part!!")
 print("Once all the 6 lives are used, the man will be hanged!!!")
 print("----------------------------------------------------------------")
 print("~Lets start The Hangman Game~")
@@ -16,6 +17,7 @@ import random
 from words import words
 word = random.choice(words)
 
+#game
 guesses=''
 lives=6
 while lives>0:
@@ -23,17 +25,18 @@ while lives>0:
 
     for char in word:
         if char in guesses:
-            print(word)    
+            print(char)    
         else:
             print("_") 
             wrong +=1
         
     if wrong==0:
         print("YOU WON!!!")
+        print("The word is : ",word)
         break
     guess=input("Guess a word:")
 
-    guesses+= guesses
+    guesses+= guess
     if guess not in word:
         lives -=1
         if lives == 6:
@@ -118,8 +121,7 @@ while lives>0:
             print("|")
             print("+-------+")
             print("GAME OVER")
-            print("The correct word was:"+word)
-
+            print("The correct word is:",word)
 
 
 
