@@ -19,18 +19,19 @@ word = random.choice(words)
 guesses=''
 lives=6
 while lives>0:
-    failed = 0
+    wrong = 0
 
     for char in word:
         if char in guesses:
-            print(char)
+            print(word)    
         else:
-            print("_")    
-            failed +=1
-    if failed==0:
+            print("_") 
+            wrong +=1
+        
+    if wrong==0:
         print("YOU WON!!!")
         break
-    guess=input("guess a character:")
+    guess=input("Guess a word:")
 
     guesses+= guesses
     if guess not in word:
@@ -46,6 +47,7 @@ while lives>0:
             print("+-------+")
             print("RIGHT GUESS")
             print("You have only 6 lives left")
+           
         elif lives == 5:
             print("+------------+")
             print("|            |")
@@ -57,6 +59,7 @@ while lives>0:
             print("+-------+")
             print("WRONG GUESS")
             print("You have only 5 lives left")
+           
         elif lives == 4:
             print("+------------+")
             print("|            |")
@@ -68,6 +71,7 @@ while lives>0:
             print("+-------+")
             print("WRONG GUESS")
             print("You have only 4 lives left")
+            
         elif lives == 3:
             print("+------------+")
             print("|            |")
@@ -79,6 +83,7 @@ while lives>0:
             print("+-------+")
             print("WRONG GUESS")
             print("You have only 3 lives left")
+            
         elif lives == 2:
             print("+------------+")
             print("|            |")
@@ -90,6 +95,7 @@ while lives>0:
             print("+-------+")
             print("WRONG GUESS")
             print("You have only 2 lives left")
+            
         elif lives == 1:
             print("+------------+")
             print("|            |")
@@ -101,6 +107,7 @@ while lives>0:
             print("+-------+")
             print("WRONG GUESS")
             print("You have only 1 life left")
+            
         elif lives == 0:
             print("+------------+")
             print("|            |")
@@ -112,6 +119,7 @@ while lives>0:
             print("+-------+")
             print("GAME OVER")
             print("The correct word was:"+word)
+
 
 
 
