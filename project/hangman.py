@@ -17,14 +17,14 @@ import random
 from words import words
 word = random.choice(words)
 
-#game
+#game begins
 guesses=''
 lives=6
 while lives>0:
     wrong = 0
 
-    for char in word:
-        if char in guesses:
+    for letter in word:
+        if letter in guesses:
             print(char)    
         else:
             print("_") 
@@ -39,6 +39,7 @@ while lives>0:
     guesses+= guess
     if guess not in word:
         lives -=1
+        #To Draw hangman
         if lives == 6:
             print("+------------+")
             print("|            |")
