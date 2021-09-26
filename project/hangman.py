@@ -4,7 +4,7 @@ name = input()
 print("Hi " +name+ "!")
 print("******HERE ARE SOME RULES******")
 print("----------------------------------------------------------------")
-print("Use only lowercase letters!")
+print("!!!Use only lowercase letters!!!")
 print("You've got 6 lives and each incorrect answer will cost a body part!!")
 print("Once all the 6 lives are used, the man will be hanged!!!")
 print("----------------------------------------------------------------")
@@ -15,7 +15,7 @@ print("----------------------------------------------------------------")
 #words
 import random
 from words import words
-word = random.choice(words)
+word = random.choice(words) 
 
 #game begins
 guesses=''
@@ -25,16 +25,16 @@ while lives>0:
 
     for letter in word:
         if letter in guesses:
-            print(char)    
+            print(letter)    
         else:
             print("_") 
             wrong +=1
         
     if wrong==0:
-        print("YOU WON!!!")
+        print("HURRAY YOU WON🎉🎉!!!!!")
         print("The word is : ",word)
         break
-    guess=input("Guess a word:")
+    guess=input("Guess a letter:")
 
     guesses+= guess
     if guess not in word:
@@ -121,7 +121,7 @@ while lives>0:
             print("|")
             print("|")
             print("+-------+")
-            print("GAME OVER")
+            print("GAME OVER \n YOU LOSE! BETTER LUCK NEXT TIME :)")
             print("The correct word is:",word)
 
 
